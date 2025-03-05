@@ -11,7 +11,7 @@ module.exports = tseslint.config(
       eslint.configs.recommended,
       ...tseslint.configs.recommended,
       ...tseslint.configs.stylistic,
-      ...angular.configs.tsRecommended,
+      ...angular.configs.tsRecommended, // https://github.com/angular-eslint/angular-eslint/blob/main/packages/angular-eslint/src/configs/ts-recommended.ts
     ],
     processor: angular.processInlineTemplates,
     rules: {
@@ -31,15 +31,19 @@ module.exports = tseslint.config(
           style: "kebab-case",
         },
       ],
+      "@angular-eslint/prefer-signals": "error",
+      // See more rules: https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/README.md
     },
   },
   {
     files: ["**/*.html"],
     extends: [
-      ...angular.configs.templateRecommended,
-      ...angular.configs.templateAccessibility,
+      ...angular.configs.templateRecommended, // https://github.com/angular-eslint/angular-eslint/blob/main/packages/angular-eslint/src/configs/template-recommended.ts
+      ...angular.configs.templateAccessibility, // https://github.com/angular-eslint/angular-eslint/blob/main/packages/angular-eslint/src/configs/template-accessibility.ts
     ],
-    rules: {},
+    rules: {
+      // See more rules: https://github.com/angular-eslint/angular-eslint/tree/main/packages/eslint-plugin-template
+    },
   },
   // @ts-ignore
   eslintConfigPrettier
