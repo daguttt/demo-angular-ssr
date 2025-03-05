@@ -8,7 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:demo-angular-hybrid-rendering": "node dist/demo-angular-hybrid-rendering/server/server.mjs",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "format:write": "prettier --write \"**/*.{ts,html}\" --cache",
+    "format:check": "prettier --check \"**/*.{ts,html}\" --cache"
   },
   "private": true,
   "dependencies": {
@@ -42,6 +44,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "prettier": "3.5.3",
     "typescript": "~5.7.2",
     "typescript-eslint": "8.26.0"
   }
