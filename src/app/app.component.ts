@@ -5,7 +5,7 @@ import { RouterOutlet } from '@angular/router';
   selector: 'dg-root',
   imports: [RouterOutlet],
   template: `
-    <h1>Welcome to {{ title }}!</h1>
+    <h1 class="text-3xl font-bold underline">Hello world!</h1>
 
     <router-outlet />
   `,
