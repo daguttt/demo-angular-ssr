@@ -1,5 +1,5 @@
 {
-  "name": "demo-angular-hybrid-rendering",
+  "name": "demo-angular-ssr",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:demo-angular-hybrid-rendering": "node dist/demo-angular-hybrid-rendering/server/server.mjs",
+    "serve:ssr:demo-angular-ssr": "node dist/demo-angular-ssr/server/server.mjs",
     "lint": "ng lint",
     "format:write": "prettier --write \"**/*.{ts,html}\" --cache",
     "format:check": "prettier --check \"**/*.{ts,html}\" --cache"

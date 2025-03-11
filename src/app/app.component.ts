@@ -12,5 +12,5 @@ import { RouterOutlet } from '@angular/router';
   styles: [],
 })
 export class AppComponent {
-  title = 'demo-angular-hybrid-rendering';
+  title = 'demo-angular-ssr';
 }
