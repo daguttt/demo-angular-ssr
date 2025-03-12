@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { HlmButtonDirective } from '@spartan-ng/ui-button-helm';
@@ -6,6 +6,7 @@ import { HlmH1Directive } from '@spartan-ng/ui-typography-helm';
 
 @Component({
   selector: 'dg-root',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterOutlet, HlmH1Directive, HlmButtonDirective],
   template: `
     @defer (hydrate never) {

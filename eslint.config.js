@@ -32,6 +32,7 @@ module.exports = tseslint.config(
         },
       ],
       '@angular-eslint/prefer-signals': 'error',
+      '@angular-eslint/prefer-on-push-component-change-detection': 'error',
       // See more rules: https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/README.md
     },
     ignores: ['src/libs/ui/**/*.ts', 'src/libs/ui/**/*.d.ts'],
