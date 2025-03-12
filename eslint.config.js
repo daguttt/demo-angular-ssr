@@ -6,7 +6,7 @@ const eslintConfigPrettier = require("eslint-config-prettier");
 
 module.exports = tseslint.config(
   {
-    files: ["**/*.ts"],
+    files: ['**/*.ts'],
     extends: [
       eslint.configs.recommended,
       ...tseslint.configs.recommended,
@@ -15,28 +15,29 @@ module.exports = tseslint.config(
     ],
     processor: angular.processInlineTemplates,
     rules: {
-      "@angular-eslint/directive-selector": [
-        "error",
+      '@angular-eslint/directive-selector': [
+        'error',
         {
-          type: "attribute",
-          prefix: "dg",
-          style: "camelCase",
+          type: 'attribute',
+          prefix: 'dg',
+          style: 'camelCase',
         },
       ],
-      "@angular-eslint/component-selector": [
-        "error",
+      '@angular-eslint/component-selector': [
+        'error',
         {
-          type: "element",
-          prefix: "dg",
-          style: "kebab-case",
+          type: 'element',
+          prefix: 'dg',
+          style: 'kebab-case',
         },
       ],
-      "@angular-eslint/prefer-signals": "error",
+      '@angular-eslint/prefer-signals': 'error',
       // See more rules: https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/README.md
     },
+    ignores: ['src/libs/ui/**/*.ts', 'src/libs/ui/**/*.d.ts'],
   },
   {
-    files: ["**/*.html"],
+    files: ['**/*.html'],
     extends: [
       ...angular.configs.templateRecommended, // https://github.com/angular-eslint/angular-eslint/blob/main/packages/angular-eslint/src/configs/template-recommended.ts
       ...angular.configs.templateAccessibility, // https://github.com/angular-eslint/angular-eslint/blob/main/packages/angular-eslint/src/configs/template-accessibility.ts
@@ -44,6 +45,7 @@ module.exports = tseslint.config(
     rules: {
       // See more rules: https://github.com/angular-eslint/angular-eslint/tree/main/packages/eslint-plugin-template
     },
+    ignores: ['src/libs/ui/**/*.html'],
   },
   // @ts-ignore
   eslintConfigPrettier
