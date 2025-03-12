@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HlmButtonDirective } from '@spartan-ng/ui-button-helm';
+import { HlmH1Directive } from '@spartan-ng/ui-typography-helm';
 
 @Component({
   selector: 'dg-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, HlmH1Directive, HlmButtonDirective],
   template: `
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    @defer (hydrate never) {
+      <h1 hlmH1 class="text-blue-500">Hello world!</h1>
+      <button hlmBtn variant="secondary" size="lg">Hello world!</button>
+    }
 
     <router-outlet />
   `,
