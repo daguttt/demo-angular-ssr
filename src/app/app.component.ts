@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+
 import { HlmButtonDirective } from '@spartan-ng/ui-button-helm';
 import { HlmH1Directive } from '@spartan-ng/ui-typography-helm';
 
@@ -16,6 +17,4 @@ import { HlmH1Directive } from '@spartan-ng/ui-typography-helm';
   `,
   styles: [],
 })
-export class AppComponent {
-  title = 'demo-angular-ssr';
-}
+export class AppComponent {}
