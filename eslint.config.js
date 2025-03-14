@@ -31,9 +31,32 @@ module.exports = tseslint.config(
           style: 'kebab-case',
         },
       ],
-      '@angular-eslint/prefer-signals': 'error',
+      '@angular-eslint/component-max-inline-declarations': [
+        'error',
+        { template: 12 },
+      ],
+      '@angular-eslint/consistent-component-styles': ['error', 'string'],
+      '@angular-eslint/no-async-lifecycle-method': 'error',
+      '@angular-eslint/no-attribute-decorator': 'error',
+      '@angular-eslint/no-conflicting-lifecycle': 'error',
+      '@angular-eslint/no-duplicates-in-metadata-arrays': 'error',
+      '@angular-eslint/no-lifecycle-call': 'error',
+      '@angular-eslint/no-pipe-impure': 'error',
+      '@angular-eslint/pipe-prefix': [
+        'error',
+        {
+          prefixes: ['dg'],
+        },
+      ],
       '@angular-eslint/prefer-on-push-component-change-detection': 'error',
-      // See more rules: https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/README.md
+      '@angular-eslint/prefer-output-readonly': 'error',
+      '@angular-eslint/prefer-signals': 'error',
+      '@angular-eslint/relative-url-prefix': 'error',
+      '@angular-eslint/sort-lifecycle-methods': 'error',
+      '@angular-eslint/use-component-selector': 'error',
+      '@angular-eslint/use-component-view-encapsulation': 'error',
+      '@angular-eslint/use-lifecycle-interface': 'error',
+      // Rules: https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/README.md
     },
     ignores: ['src/libs/ui/**/*.ts', 'src/libs/ui/**/*.d.ts'],
   },
@@ -44,7 +67,7 @@ module.exports = tseslint.config(
       ...angular.configs.templateAccessibility, // https://github.com/angular-eslint/angular-eslint/blob/main/packages/angular-eslint/src/configs/template-accessibility.ts
     ],
     rules: {
-      // See more rules: https://github.com/angular-eslint/angular-eslint/tree/main/packages/eslint-plugin-template
+      // Rules: https://github.com/angular-eslint/angular-eslint/tree/main/packages/eslint-plugin-template
     },
     ignores: ['src/libs/ui/**/*.html'],
   },

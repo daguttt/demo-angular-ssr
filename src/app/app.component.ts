@@ -16,6 +16,6 @@ import { HlmH1Directive } from '@spartan-ng/ui-typography-helm';
 
     <router-outlet />
   `,
-  styles: [],
+  styles: ``,
 })
 export class AppComponent {}
