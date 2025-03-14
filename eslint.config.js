@@ -67,6 +67,14 @@ module.exports = tseslint.config(
       ...angular.configs.templateAccessibility, // https://github.com/angular-eslint/angular-eslint/blob/main/packages/angular-eslint/src/configs/template-accessibility.ts
     ],
     rules: {
+      '@angular-eslint/template/button-has-type': 'error',
+      '@angular-eslint/template/no-duplicate-attributes': 'error',
+      '@angular-eslint/template/no-interpolation-in-attributes': 'error',
+      '@angular-eslint/template/no-positive-tabindex': 'error',
+      '@angular-eslint/template/prefer-control-flow': 'error',
+      '@angular-eslint/template/prefer-ngsrc': 'error',
+      '@angular-eslint/template/prefer-self-closing-tags': 'error',
+      '@angular-eslint/template/prefer-static-string-properties': 'error',
       // Rules: https://github.com/angular-eslint/angular-eslint/tree/main/packages/eslint-plugin-template
     },
     ignores: ['src/libs/ui/**/*.html'],

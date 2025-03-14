@@ -1,0 +1,17 @@
+@defer (hydrate never) {
+  <h1 hlmH1 class="text-blue-500">Hello world!</h1>
+  <button
+    type="button"
+    hlmBtn
+    variant="secondary"
+    size="lg"
+    (click)="onHelloWorldClick()"
+    tabindex
+  >
+    Hello world!
+  </button>
+  <p>{{ state().count }}</p>
+  <dg-child />
+}
+
+<router-outlet />
