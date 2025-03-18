@@ -8,10 +8,15 @@ import { env } from './env';
 const angularAppEngine = new AngularAppEngine();
 const angularNodeAppEngine = new AngularNodeAppEngine();
 
+export const netlifyAppEngineHandler =
+  env.RUNTIME_PROVIDER === 'netlify'
+    ? netlifyRequestHandler(angularAppEngine)
+    : null;
+
 /**
  * The request handler used by the Angular CLI (dev-server and during build).
  */
 export const reqHandler =
   env.RUNTIME_PROVIDER === 'netlify'
-    ? netlifyRequestHandler(angularAppEngine)
+    ? netlifyAppEngineHandler
     : nodeRequestHandler(angularNodeAppEngine);

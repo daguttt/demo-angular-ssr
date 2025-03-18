@@ -2,10 +2,6 @@ import 'dotenv/config';
 import { createEnv } from '@t3-oss/env-core';
 import { z } from 'zod';
 
-console.log({
-  env: process.env,
-});
-
 export const env = createEnv({
   server: {
     RUNTIME_PROVIDER: z.enum(['netlify', 'node']),

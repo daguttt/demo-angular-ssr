@@ -44,3 +44,5 @@ Thumbs.db
 # Environment
 .env
 !.env.example
+# Local Netlify folder
+.netlify
