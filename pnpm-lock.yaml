@@ -47,6 +47,9 @@ importers:
       '@spartan-ng/brain':
         specifier: 0.0.1-alpha.420
         version: 0.0.1-alpha.420(@angular/cdk@19.2.0(@angular/common@19.2.0(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/common@19.2.0(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(@angular/forms@19.2.0(@angular/common@19.2.0(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(@angular/platform-browser@19.2.0(@angular/common@19.2.0(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0)))(rxjs@7.8.2))(clsx@2.1.1)(luxon@3.5.0)(rxjs@7.8.2)(tailwind-merge@2.6.0)(tailwindcss-animate@1.0.7(tailwindcss@4.0.12))(tailwindcss@4.0.12)
+      '@t3-oss/env-core':
+        specifier: 0.12.0
+        version: 0.12.0(typescript@5.7.3)(zod@3.24.2)
       '@tailwindcss/postcss':
         specifier: 4.0.12
         version: 4.0.12
@@ -56,6 +59,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      dotenv:
+        specifier: 16.4.7
+        version: 16.4.7
       embla-carousel-angular:
         specifier: 18.0.0
         version: 18.0.0(@angular/common@19.2.0(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))
@@ -74,6 +80,9 @@ importers:
       tslib:
         specifier: ^2.3.0
         version: 2.8.1
+      zod:
+        specifier: 3.24.2
+        version: 3.24.2
       zone.js:
         specifier: ~0.15.0
         version: 0.15.0
@@ -2379,6 +2388,20 @@ packages:
     resolution: {integrity: sha512-S0HYd9Ft7xEQEzK8COK01t7F44O641Kh/9CgP4SV0rXJOHoQjWBvyXEQl8vSmwarXnAWzNtU2FnGRU+I1Qq2yQ==}
     peerDependencies:
       tslib: ^2.3.0
+
+  '@t3-oss/env-core@0.12.0':
+    resolution: {integrity: sha512-lOPj8d9nJJTt81mMuN9GMk8x5veOt7q9m11OSnCBJhwp1QrL/qR+M8Y467ULBSm9SunosryWNbmQQbgoiMgcdw==}
+    peerDependencies:
+      typescript: '>=5.0.0'
+      valibot: ^1.0.0-beta.7 || ^1.0.0
+      zod: ^3.24.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+      valibot:
+        optional: true
+      zod:
+        optional: true
 
   '@tailwindcss/node@4.0.12':
     resolution: {integrity: sha512-a6J11K1Ztdln9OrGfoM75/hChYPcHYGNYimqciMrvKXRmmPaS8XZTHhdvb5a3glz4Kd4ZxE1MnuFE2c0fGGmtg==}
@@ -6638,6 +6661,9 @@ packages:
     resolution: {integrity: sha512-cYVsTjKl8b+FrnidjibDWskAv7UKOfcwaVZdp/it9n1s9fU3IkgDbhdIRKCW4JDsAlECJY0ytoVPT3sK6kideA==}
     engines: {node: '>=18'}
 
+  zod@3.24.2:
+    resolution: {integrity: sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ==}
+
   zone.js@0.15.0:
     resolution: {integrity: sha512-9oxn0IIjbCZkJ67L+LkhYWRyAy7axphb3VgE2MBDlOqnmHMPWGYMxJxBYFueFq/JGY2GMwS0rU+UCLunEmy5UA==}
 
@@ -9283,6 +9309,11 @@ snapshots:
       - vue-template-compiler
       - vue-tsc
       - webpack-cli
+
+  '@t3-oss/env-core@0.12.0(typescript@5.7.3)(zod@3.24.2)':
+    optionalDependencies:
+      typescript: 5.7.3
+      zod: 3.24.2
 
   '@tailwindcss/node@4.0.12':
     dependencies:
@@ -13844,5 +13875,7 @@ snapshots:
   yocto-queue@1.1.1: {}
 
   yoctocolors-cjs@2.1.2: {}
+
+  zod@3.24.2: {}
 
   zone.js@0.15.0: {}
