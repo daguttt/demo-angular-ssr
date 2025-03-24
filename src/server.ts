@@ -5,12 +5,9 @@ import { netlifyRequestHandler } from './netlify-request-handler';
 import { nodeRequestHandler } from './node-request-handler';
 import { env } from './env';
 
-const angularAppEngine = new AngularAppEngine();
-const angularNodeAppEngine = new AngularNodeAppEngine();
-
 export const netlifyAppEngineHandler =
   env.RUNTIME_PROVIDER === 'netlify'
-    ? netlifyRequestHandler(angularAppEngine)
+    ? netlifyRequestHandler(new AngularAppEngine())
     : null;
 
 /**
@@ -19,4 +16,4 @@ export const netlifyAppEngineHandler =
 export const reqHandler =
   env.RUNTIME_PROVIDER === 'netlify'
     ? netlifyAppEngineHandler
-    : nodeRequestHandler(angularNodeAppEngine);
+    : nodeRequestHandler(new AngularNodeAppEngine());
