@@ -54,9 +54,6 @@ export function nodeRequestHandler(angularApp: AngularNodeAppEngine) {
    * Start the server if this module is the main entry point.
    * The server listens on the port defined by the `PORT` environment variable, or defaults to 4000.
    */
-  console.log();
-  console.log({ importMetaUrl: import.meta.url });
-  console.log();
   if (isMainModule(import.meta.url)) {
     const port = process.env['PORT'] || 4000;
     app.listen(port, () => {

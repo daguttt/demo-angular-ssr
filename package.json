@@ -24,7 +24,7 @@
     "@angular/platform-server": "~19.2.0",
     "@angular/router": "~19.2.0",
     "@angular/ssr": "~19.2.0",
-    "@ng-icons/core": ">=29.0.0",
+    "@ng-icons/core": "^29.10.0",
     "@ng-icons/lucide": ">=29.0.0",
     "@spartan-ng/brain": "0.0.1-alpha.420",
     "@t3-oss/env-core": "0.12.0",

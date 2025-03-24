@@ -1,17 +1,4 @@
-@defer (hydrate never) {
-  <h1 hlmH1 class="text-blue-500">Hello world!</h1>
-  <button
-    type="button"
-    hlmBtn
-    variant="secondary"
-    size="lg"
-    (click)="onHelloWorldClick()"
-    tabindex
-  >
-    Hello world!
-  </button>
-  <p>{{ state().count }}</p>
-  <dg-child />
-}
-
+<header class="p-4 border-b">
+  <h1 hlmH1 class="text-blue-500">Demo SSR with Spartan UI</h1>
+</header>
 <router-outlet />

@@ -24,6 +24,9 @@
       ],
       "@spartan-ng/ui-typography-helm": [
         "./src/libs/ui/ui-typography-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-icon-helm": [
+        "./src/libs/ui/ui-icon-helm/src/index.ts"
       ]
     }
   },
