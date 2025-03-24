@@ -1,7 +1,9 @@
 import { AngularAppEngine } from '@angular/ssr';
 import { getContext } from '@netlify/angular-runtime/context';
 
-function buildNetlifyAppEngineHandler(angularAppEngine: AngularAppEngine) {
+export function buildNetlifyAppEngineHandler(
+  angularAppEngine: AngularAppEngine
+) {
   return async function netlifyAppEngineHandler(
     request: Request
   ): Promise<Response> {
@@ -19,6 +21,3 @@ function buildNetlifyAppEngineHandler(angularAppEngine: AngularAppEngine) {
   };
 }
 
-export function netlifyRequestHandler(angularAppEngine: AngularAppEngine) {
-  return buildNetlifyAppEngineHandler(angularAppEngine);
-}
